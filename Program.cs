@@ -10,6 +10,11 @@ namespace Academy18_2stage_Csharp
     {
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
+    }
+    enum CarType
+    {
+        Passenger,Truck,Bus,Motorcycle
     }
 }
