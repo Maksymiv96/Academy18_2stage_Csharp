@@ -1,0 +1,7 @@
+C:\Users\Maksymiv\source\repos\Academy18_2stage_Csharp\Academy18_2stage_Csharp\bin\Debug\Academy18_2stage_Csharp.exe.config
+C:\Users\Maksymiv\source\repos\Academy18_2stage_Csharp\Academy18_2stage_Csharp\bin\Debug\Academy18_2stage_Csharp.exe
+C:\Users\Maksymiv\source\repos\Academy18_2stage_Csharp\Academy18_2stage_Csharp\bin\Debug\Academy18_2stage_Csharp.pdb
+C:\Users\Maksymiv\source\repos\Academy18_2stage_Csharp\Academy18_2stage_Csharp\obj\Debug\Academy18_2stage_Csharp.csprojResolveAssemblyReference.cache
+C:\Users\Maksymiv\source\repos\Academy18_2stage_Csharp\Academy18_2stage_Csharp\obj\Debug\Academy18_2stage_Csharp.csproj.CoreCompileInputs.cache
+C:\Users\Maksymiv\source\repos\Academy18_2stage_Csharp\Academy18_2stage_Csharp\obj\Debug\Academy18_2stage_Csharp.exe
+C:\Users\Maksymiv\source\repos\Academy18_2stage_Csharp\Academy18_2stage_Csharp\obj\Debug\Academy18_2stage_Csharp.pdb
