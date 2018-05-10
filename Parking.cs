@@ -32,7 +32,7 @@ namespace Academy18_2stage_Csharp
         {
             try
             {
-                Console.WriteLine("set parking starting balance");
+                Console.WriteLine("set parking starting balance (not necessary, can skip it pressing enter)");
                 Balance = Convert.ToInt32( Console.ReadLine());
                 
             }
@@ -78,6 +78,19 @@ namespace Academy18_2stage_Csharp
             }
         }
 
+
+        public void shovvlog()
+        {
+            foreach (Transaction trans in Transactions)
+            {
+                if (timetosec(trans.DateTime) > (timetosec(DateTime.Now) - 60))
+                {
+                    Console.WriteLine(trans.Shovv());
+                }
+
+            }
+            
+        }
 
         private static void creatinglog(object obj)
         {

@@ -77,7 +77,7 @@ namespace Academy18_2stage_Csharp
 
         public void SetSetting()
         {
-            Console.WriteLine("Initialization setting\ninput timeout (sec)");
+            Console.WriteLine("Initialization setting\ninput timeout (sec) (you can scip it, just press enter)");
             int timeout = Convert.ToInt32(Console.ReadLine());
             Dictionary<string, int> dictionary = new Dictionary<string, int>();
             //Console.WriteLine(dictionary[((CarType)1).ToString()]);

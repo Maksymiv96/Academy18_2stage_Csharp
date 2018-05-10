@@ -12,7 +12,7 @@ namespace Academy18_2stage_Csharp
         public Menu()
         {
             Parking pg = Parking.Instance;
-            Console.WriteLine("balance" + Parking.Balance);
+
             string menu;
             help();
             
@@ -76,20 +76,27 @@ namespace Academy18_2stage_Csharp
                         {
                             Console.WriteLine("Choose your car");
                             string car = Console.ReadLine();
-                            Console.WriteLine("insert money");
-                            double money = Convert.ToDouble(Console.ReadLine());
-                            Parking parking = Parking.Instance;
-                            int index = Parking.Cars.FindIndex(x => x.Ident.Equals(car));
-                            if (money >= Math.Abs(Parking.Cars[index].Balance))
+                            try
                             {
-                                Parking.Balance += Math.Abs(Parking.Cars[index].Balance);
-                                Parking.Cars[index].Balance += money;
-                            }
-                            else
-                            {
-                                Parking.Balance += money;
-                                Parking.Cars[index].Balance += money;
+                                Console.WriteLine("insert money");
+                                double money = Convert.ToDouble(Console.ReadLine());
+                                Parking parking = Parking.Instance;
+                                int index = Parking.Cars.FindIndex(x => x.Ident.Equals(car));
+                                if (money >= Math.Abs(Parking.Cars[index].Balance))
+                                {
+                                    Parking.Balance += Math.Abs(Parking.Cars[index].Balance);
+                                    Parking.Cars[index].Balance += money;
+                                }
+                                else
+                                {
+                                    Parking.Balance += money;
+                                    Parking.Cars[index].Balance += money;
 
+                                }
+                            }
+                            catch(Exception ex)
+                            {
+                                Console.WriteLine(ex.Message);
                             }
                             
                             break;
@@ -106,6 +113,7 @@ namespace Academy18_2stage_Csharp
                         }
                     case "trans":
                         {
+                            pg.shovvlog();
                             break;
                         }
                     case "exit":
