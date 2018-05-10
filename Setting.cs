@@ -32,7 +32,30 @@ namespace Academy18_2stage_Csharp
 
 
         public static int Timeout { get => _timeout; set => _timeout = value; }
-        public static Dictionary<string, int> Dictionary { get => _dictionary; set => _dictionary = value; }
+        //public static Dictionary<string, int> Dictionary { get => _dictionary; set => _dictionary = value; }
+        public static void DictionarySet(string key, int value)
+        {
+            if (_dictionary.ContainsKey(key))
+            {
+                _dictionary[key] = value;
+            }
+            else
+            {
+                _dictionary.Add(key, value);
+            }
+        }
+
+        public static int DictionaryGet(string key)
+        {
+            int result = 0;
+
+            if (_dictionary.ContainsKey(key))
+            {
+                result = _dictionary[key];
+            }
+
+            return result;
+        }
         public static int Parkingspace { get => _parkingspace; set => _parkingspace = value; }
         public static double Fine { get => _fine; set => _fine = value; }
 
@@ -77,10 +100,10 @@ namespace Academy18_2stage_Csharp
 
         public void SetSetting(Dictionary<string,int> dict, int timeout = 3,  int parkingspace = 150, double fine = 1.5)
         {
-            Dictionary = dict;
-            Timeout = timeout;
-            Parkingspace = parkingspace;
-            Fine = fine;
+            _dictionary = dict;
+            _timeout = timeout;
+            _parkingspace = parkingspace;
+            _fine = fine;
 
         }
     }
