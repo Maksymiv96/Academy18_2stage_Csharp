@@ -47,12 +47,13 @@ namespace Academy18_2stage_Csharp
 
         public void Refill(double money)
         {
-
+            
+            this.Balance += money;
         }
 
-        public void Shovv()
+        public string Shovv()
         {
-            Console.WriteLine($"{_type} vvith ID {_ident} has balance {_balance}");
+            return ($"{_type} vvith ID {_ident} has balance {_balance}");
         }
 
     }
