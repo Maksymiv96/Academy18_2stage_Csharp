@@ -109,6 +109,7 @@ namespace Academy18_2stage_Csharp
                     case "freepark":
                         {
                             Console.WriteLine("Total free spaces: " + (Setting.Parkingspace - Parking.Cars.Count));
+                            Console.WriteLine("Count cars: " + Parking.Cars.Count());
                             break;
                         }
                     case "trans":
@@ -116,6 +117,11 @@ namespace Academy18_2stage_Csharp
                             pg.shovvlog();
                             break;
                         }
+                    case "lastminute":
+                        {
+                            pg.lastminuteearn();
+                            break;
+                        }                                     
                     case "exit":
                         {
                             Console.WriteLine("auf vviedersehen mein lieber freund");
@@ -150,6 +156,7 @@ namespace Academy18_2stage_Csharp
                 "refill - refill car's balance\n" +
                 "money - shovv parking total earnings\n" +
                 "freepark - shovv count of free parkingspace\n" +
+                "lastminute - inform about last 60 second\n"+
                 "trans - get transaction list\n"+
                 "log - shovv transaction log\n" + 
                 "exit - =(");

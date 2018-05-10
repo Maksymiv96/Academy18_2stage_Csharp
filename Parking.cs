@@ -91,7 +91,19 @@ namespace Academy18_2stage_Csharp
             }
             
         }
+        public void lastminuteearn()
+        {
+            double sum = 0;
+            foreach (Transaction trans in Transactions)
+            {
+                if (timetosec(trans.DateTime) > (timetosec(DateTime.Now) - 60))
+                {
+                    sum += trans.MOney;
+                }
 
+            }
+            Console.WriteLine($"total earnd in last minute: {sum}");
+        }
         private static void creatinglog(object obj)
         {
             double sum = 0;
